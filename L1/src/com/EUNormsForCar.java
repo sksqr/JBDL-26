@@ -1,5 +1,5 @@
 package com;
 
-public interface EUNomsForCar {
+public interface EUNormsForCar {
     String getEuropeRelatedDetails();
 }

@@ -1,8 +1,8 @@
 package com.gfg;
 
-import com.EUNomsForCar;
+import com.EUNormsForCar;
 
-public abstract class Car implements GovtNomsForCar, EUNomsForCar {
+public abstract class Car implements GovtNormsForCar, EUNormsForCar {
 
     private String rcNumber;
     private Engine engine;

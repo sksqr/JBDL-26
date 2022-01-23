@@ -7,6 +7,9 @@ public class Student extends Person{
     private List<String> subjects;
     private String std;
 
+    void study(){
+        System.out.println("Student is studying");
+    }
 
 
     public Student(String name, int age, int rollNumber, List<String> subjects, String std) {
@@ -14,6 +17,10 @@ public class Student extends Person{
         this.rollNumber = rollNumber;
         this.subjects = subjects;
         this.std = std;
+    }
+
+    public Student(int rollNumber) {
+        this.rollNumber = rollNumber;
     }
 
     public int getRollNumber() {
