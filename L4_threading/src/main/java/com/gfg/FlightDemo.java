@@ -44,6 +44,5 @@ public class FlightDemo
             e.printStackTrace();
         }
         System.out.println(response);
-
     }
 }

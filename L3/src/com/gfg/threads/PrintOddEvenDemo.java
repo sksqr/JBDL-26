@@ -27,7 +27,7 @@ class PrintEvenOdd implements Runnable {
                 }
                 System.out.println(Thread.currentThread().getName() + " -->  " + num);
                 num++;
-                lock.notifyAll();
+                    lock.notifyAll();
             }
         }
     }
