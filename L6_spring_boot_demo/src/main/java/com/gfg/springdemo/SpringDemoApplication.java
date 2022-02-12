@@ -11,9 +11,13 @@ public class SpringDemoApplication {
 	private static Logger logger = LoggerFactory.getLogger(SpringDemoApplication.class);
 
 	public static void main(String[] args) {
-//		logger.debug("Starting application in debug log level");
-		logger.info("Starting application");
+//		logger.debug("Starting application in DEBUG log level");
 		SpringApplication.run(SpringDemoApplication.class, args);
+		logger.debug("Starting application in DEBUG log level after spring start");
+		logger.info("Starting application in INFO log level after spring start");
+		logger.trace("Starting application in TRACE log level after spring start");
+		logger.warn("Starting application in WARN log level after spring start");
+		logger.error("Starting application in ERROR log level after spring start");
 	}
 
 }
