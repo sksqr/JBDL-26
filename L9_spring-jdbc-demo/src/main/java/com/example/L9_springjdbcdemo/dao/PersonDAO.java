@@ -1,6 +1,7 @@
-package com.example.L8mysqldemo.dao;
+package com.example.L9_springjdbcdemo.dao;
 
-import com.example.L8mysqldemo.dbmodel.Person;
+
+import com.example.L9_springjdbcdemo.dbmodel.Person;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
