@@ -1,14 +1,13 @@
-package com.example.L9_jpa_demo.controllers;
+package com.example.L10_jpa_demo.controllers;
 
-import com.example.L9_jpa_demo.PersonService;
-import com.example.L9_jpa_demo.dbmodel.Address;
-import com.example.L9_jpa_demo.dbmodel.Person;
-import com.example.L9_jpa_demo.dbmodel.SalarySlip;
-import com.example.L9_jpa_demo.dtos.PersonDto;
-import com.example.L9_jpa_demo.repository.AddressRepository;
-import com.example.L9_jpa_demo.repository.SalarySlipRepository;
+import com.example.L10_jpa_demo.dbmodel.Address;
+import com.example.L10_jpa_demo.dbmodel.Person;
+import com.example.L10_jpa_demo.dbmodel.SalarySlip;
+import com.example.L10_jpa_demo.dtos.PersonDto;
+import com.example.L10_jpa_demo.repository.AddressRepository;
+import com.example.L10_jpa_demo.repository.SalarySlipRepository;
+import com.example.L10_jpa_demo.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

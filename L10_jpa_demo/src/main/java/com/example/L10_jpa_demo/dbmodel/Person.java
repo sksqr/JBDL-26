@@ -1,8 +1,10 @@
-package com.example.L9_jpa_demo.dbmodel;
+package com.example.L10_jpa_demo.dbmodel;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
-import javax.annotation.Generated;
 import javax.persistence.*;
 
 @Data
@@ -21,6 +23,13 @@ public class Person {
     private String email;
     private String phone;
 
+    @OneToOne(  cascade = CascadeType.ALL)
+    @JoinColumn(name = "addressId")
+    private Address address;
+
+    @ManyToOne(  cascade = CascadeType.ALL)
+    @JoinColumn(name = "branchId")
+    private Branch branch;
 
 
 }
