@@ -19,14 +19,12 @@ public class L10JpaDemoApplication {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext applicationContext = SpringApplication.run(L10JpaDemoApplication.class, args);
 
-		TransactionalService transactionalService = (TransactionalService) applicationContext.getBean("transactionalService");
-		transactionalService.transactionalMethodJPA();
+		// One branch can have many people/persons
+		demoOneToManyMapping(applicationContext);
 
+//		TransactionalService transactionalService = (TransactionalService) applicationContext.getBean("transactionalService");
+//		transactionalService.transactionalMethodJPA();
 
-
-//		BranchRepository branchRepository = (BranchRepository) applicationContext.getBean("branchRepository");
-//		Branch branch = branchRepository.findById(1).get();
-//		System.out.println(branch.getBranchName());
 
 
 
@@ -34,6 +32,15 @@ public class L10JpaDemoApplication {
 //		demoManyToOne(args);
 
 //		demoOneToOneMapping(applicationContext);
+	}
+
+	private static void demoOneToManyMapping(ConfigurableApplicationContext applicationContext) {
+		BranchRepository branchRepository = (BranchRepository) applicationContext.getBean("branchRepository");
+		Branch branch = branchRepository.findById(1).get();
+		System.out.println(branch.getBranchName());
+		for(Person person : branch.getPersonSet()){
+			System.out.println(person.getName());
+		}
 	}
 
 	private static void demoManyToOne(String[] args) {

@@ -1,12 +1,12 @@
 package com.example.L10_jpa_demo.dbmodel;
 
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Set;
 
-@Data
+@Setter
+@Getter
 @ToString
 @Entity
 public class Branch {

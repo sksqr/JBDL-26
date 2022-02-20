@@ -1,16 +1,11 @@
 package com.example.L10_jpa_demo.dbmodel;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
+@Setter
+@Getter
 @Entity
 public class Person {
     @Id
