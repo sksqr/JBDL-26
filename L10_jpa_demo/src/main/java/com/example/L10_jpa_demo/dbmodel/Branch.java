@@ -1,5 +1,6 @@
 package com.example.L10_jpa_demo.dbmodel;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
@@ -17,6 +18,7 @@ public class Branch {
     private String branchName;
 
     @OneToMany(mappedBy = "branch", fetch = FetchType.EAGER)
+    @JsonIgnoreProperties("branch")
     private Set<Person> personSet;
 
 

@@ -1,5 +1,6 @@
 package com.example.L10_jpa_demo.dbmodel;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
@@ -24,6 +25,7 @@ public class Person {
 
     @ManyToOne(  cascade = CascadeType.ALL)
     @JoinColumn(name = "branchId")
+    @JsonIgnoreProperties("personSet")
     private Branch branch;
 
 

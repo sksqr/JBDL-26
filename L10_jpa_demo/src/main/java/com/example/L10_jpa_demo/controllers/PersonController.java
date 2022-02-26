@@ -1,5 +1,6 @@
 package com.example.L10_jpa_demo.controllers;
 
+import com.example.L10_jpa_demo.aop.LogExecutionTime;
 import com.example.L10_jpa_demo.dbmodel.Address;
 import com.example.L10_jpa_demo.dbmodel.Person;
 import com.example.L10_jpa_demo.dbmodel.SalarySlip;
@@ -43,6 +44,7 @@ public class PersonController {
 
 
     @GetMapping("/person/{id}")
+    @LogExecutionTime
     Person getAllPersons(@PathVariable("id") Integer id){
         return personService.getPersonById(id);
     }

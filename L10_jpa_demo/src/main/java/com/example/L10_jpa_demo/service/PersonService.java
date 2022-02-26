@@ -37,12 +37,14 @@ public class PersonService {
     }
 
     public Person getPersonById(Integer id){
-        return personRepository.getById(id);
+
+        return personRepository.findById(id).get();
     }
 
 
     public void deletePerson(Integer id){
         personRepository.deleteById(id);
+
     }
 
 
