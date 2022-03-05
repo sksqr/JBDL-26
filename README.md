@@ -5,4 +5,7 @@ Spring: https://docs.spring.io/spring-framework/docs/current/reference/html/ </b
 REST Maturity Levels: https://martinfowler.com/articles/richardsonMaturityModel.html </br>
 lombok setup: https://projectlombok.org/setup/intellij </br> </br>
 Minor Project-1 Postman Collection: </br>
-https://www.getpostman.com/collections/c87b0eda22a9ce70d333 </br>
+https://www.getpostman.com/collections/c87b0eda22a9ce70d333 </br></br>
+Redis: https://redis.io/commands </br>
+Cloud Redis Setup: </br>
+https://app.redislabs.com </br>
