@@ -7,10 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HelloController {
@@ -41,9 +38,17 @@ public class HelloController {
         return ResponseEntity.ok(user.getId());
     }
 
-    @GetMapping("/admin/createUser")
-    public ResponseEntity<String> getCreateUser(@RequestBody MyDBUser user){
-        return ResponseEntity.ok("HELLO! CreateUser ");
+
+
+
+//for CSRF Demo
+    @GetMapping("/admin/changePassword")
+    public ResponseEntity<String> getCreateUser(@RequestParam String newPassword){
+        UserDetails userDetails  = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        MyDBUser user = repository.findByUsername(userDetails.getUsername());
+        user.setPassword(passwordEncoder.encode(newPassword));
+        repository.save(user);
+        return ResponseEntity.ok("Password changed");
     }
 
 }

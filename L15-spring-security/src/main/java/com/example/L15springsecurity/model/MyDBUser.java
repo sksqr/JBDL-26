@@ -33,7 +33,8 @@ public class MyDBUser implements UserDetails {
     }
 
 
-    private void setRoles(String roles){
+    public void setRoles(String roles){
+        this.roles=roles;
         String[] rolesArr = roles.split(",");
         authorityList = new ArrayList<>();
         for(String role : rolesArr){
@@ -95,4 +96,7 @@ public class MyDBUser implements UserDetails {
     }
 
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
 }
