@@ -6,7 +6,9 @@
 	<modules>
 		<module>user-service</module>
 		<module>wallet-service</module>
-	</modules>
+		<module>notification-service</module>
+        <module>transaction-service</module>
+    </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -63,9 +65,11 @@
 			<artifactId>spring-kafka-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency> <groupId>org.json</groupId>
+		<dependency>
+			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
-			<version>20210307</version> </dependency>
+			<version>20210307</version>
+		</dependency>
 	</dependencies>
 
 	<build>
